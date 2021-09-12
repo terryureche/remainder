@@ -25,8 +25,25 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
 >;
 
 export type RootTabParamList = {
+  CreateRemainder: undefined;
   TabOne: undefined;
   TabTwo: undefined;
+};
+
+export type RemainderContent = {
+  title: String,
+  date: String,
+  color: String,
+  notify: Boolean,
+};
+
+export type Remainder = {
+  id: String,
+  content: RemainderContent
+};
+
+export type RemainderList = {
+  [key: string]: Remainder
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
